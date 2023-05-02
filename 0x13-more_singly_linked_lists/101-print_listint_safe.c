@@ -27,10 +27,10 @@ size_t looped_listint_len(const listint_t *head)
 				 slow = slow->next;
 				 counter++;
 			 }
-			 return counter;
+			 return (counter);
 		 }
 	 }
-	 return 0;
+	 return (0);
 }
 
  /**
