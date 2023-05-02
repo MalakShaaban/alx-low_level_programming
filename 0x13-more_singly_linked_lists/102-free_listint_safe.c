@@ -28,5 +28,5 @@ size_t free_listint_safe(listint_t **h)
 		current = next;
 	}
 	*h = NULL;
-	return s;
+	return (s);
 }
