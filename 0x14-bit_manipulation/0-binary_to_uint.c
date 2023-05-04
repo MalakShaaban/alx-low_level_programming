@@ -11,25 +11,21 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int r = 0;
-	const char *p = b;
+	int i = 0;
 
 	if (b == NULL)
 	{
 		return (0);
 	}
 
-	while (*p != '0')
+	for (; b[i]; i++)
 	{
-		if (*p == '0' || *p == '1')
-		{
-			r <<= 1;
-			r += *p - '0';
-		}
-		else
+		if (b[i] < '0' || b[i] > '1')
 		{
 			return (0);
+			r = 2 * r + (b[i] - '0');
 		}
-		p++;
 	}
+
 	return (r);
 }
