@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_binary -  it prints the binary equivalent of a decimal digit
@@ -17,12 +18,12 @@ int counter = 0;
 
 		if (cur_num & 1)
 		{
-			_putchar('1');
+			putchar('1');
 			counter++;
 		}
 		else if (counter)
-			_putchar('0');
+			putchar('0');
 	}
 	if (!counter)
-		_putchar('0');
+		putchar('0');
 }
